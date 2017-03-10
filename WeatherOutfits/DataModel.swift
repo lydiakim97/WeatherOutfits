@@ -14,11 +14,10 @@ class DataModel {
     var _temp: String?
     var _location: String?
     var _weather: String?
-    var loc: String = "Vancouver"
+    var loc: String = ""
     var url: URL!
     typealias JSONStandard = Dictionary<String, AnyObject>
-    
-    var city : String!
+        
     func setURL() {
         url = URL(string: "http://api.openweathermap.org/data/2.5/weather?q=\(loc)&appid=89d10b2ad50629401facb9005b179f28")!
     }
@@ -46,6 +45,7 @@ class DataModel {
                 self._weather = weather
                 self._location = "\(name), \(country)"
                 self._date = dt
+                
             }
             
             completed()

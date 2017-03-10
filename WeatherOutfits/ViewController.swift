@@ -9,33 +9,35 @@
 import UIKit
 
 class ViewController: UIViewController, UISearchBarDelegate {
-    
-    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var weatherLabel: UILabel!
     @IBOutlet weak var weatherImage: UIImageView!
-    @IBOutlet weak var outfitButtonOutlet: UIButton!
     @IBOutlet weak var searchButton: UISearchBar!
+    @IBOutlet weak var SeeOutfits: UIButton!
     
     var weather = DataModel() // from DataModel.Swift
     var cityLocation: String! // location that user searches
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let defaults = UserDefaults.standard
+        let token = defaults.string(forKey: "myKey")
+        weather.loc = token ?? "Vancouver"
         weather.setURL()
         weather.downloadData {
             self.updateUI()
         }
         searchButton.delegate = self;
         self.hideKeyboardWhenTappedAround()
-        outfitButtonOutlet.layer.cornerRadius = 7
+        SeeOutfits.layer.cornerRadius = 7
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
     func updateUI() {
         tempLabel.text = "\(weather.temp)"
@@ -49,14 +51,19 @@ class ViewController: UIViewController, UISearchBarDelegate {
         cityLocation = searchButton.text
         cityLocation = cityLocation.removeWhiteSpace() // ex. New York -> NewYork
         weather.loc = cityLocation
+
+        let defaults = UserDefaults.standard
+        defaults.set(cityLocation, forKey: "myKey") // save the search result
+        defaults.synchronize()
+    
+        
         weather.setURL() // update API with new city location
         weather.downloadData {
             self.updateUI()
         }
         searchButton.resignFirstResponder() // dismiss keyboard
+        
     }
-
-    
 }
 
 /* Remove whitespaces in a string */
@@ -77,3 +84,5 @@ extension UIViewController {
         view.endEditing(true)
     }
 }
+
+
