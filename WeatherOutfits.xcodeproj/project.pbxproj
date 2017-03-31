@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		760FDD361E68CF7C005298A4 /* Pods_WeatherOutfits.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A563D45B2601BD98DBFF68A9 /* Pods_WeatherOutfits.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		760FDD3C1E68D02E005298A4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 760FDD3B1E68D02E005298A4 /* Alamofire.framework */; };
-		760FDD3D1E68D09B005298A4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 760FDD3B1E68D02E005298A4 /* Alamofire.framework */; };
-		760FDD3E1E68D09B005298A4 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 760FDD3B1E68D02E005298A4 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		766BFF681E62A950008305E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766BFF671E62A950008305E5 /* AppDelegate.swift */; };
 		766BFF6A1E62A950008305E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766BFF691E62A950008305E5 /* ViewController.swift */; };
 		766BFF6D1E62A950008305E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766BFF6B1E62A950008305E5 /* Main.storyboard */; };
@@ -48,7 +46,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				760FDD361E68CF7C005298A4 /* Pods_WeatherOutfits.framework in Embed Frameworks */,
-				760FDD3E1E68D09B005298A4 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,7 +82,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				760FDD3C1E68D02E005298A4 /* Alamofire.framework in Frameworks */,
-				760FDD3D1E68D09B005298A4 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +249,7 @@
 				TargetAttributes = {
 					766BFF631E62A94F008305E5 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = U78YPQK9PE;
+						DevelopmentTeam = N6RP3H788Z;
 						ProvisioningStyle = Automatic;
 					};
 					766BFF771E62A950008305E5 = {
@@ -528,7 +524,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = U78YPQK9PE;
+				DEVELOPMENT_TEAM = N6RP3H788Z;
 				INFOPLIST_FILE = WeatherOutfits/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -544,7 +540,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = U78YPQK9PE;
+				DEVELOPMENT_TEAM = N6RP3H788Z;
 				INFOPLIST_FILE = WeatherOutfits/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
